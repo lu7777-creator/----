@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Color</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="logo">Personal Color</div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <h1 class="fade">Find Your Best Color</h1>
+  <p class="fade">あなたに似合う色を見つけよう</p>
+</section>
+
+<!-- ===== ABOUT（2カラム） ===== -->
+<section id="about" class="two-column section">
+  <div class="img-box slide-left">
+    <img src="images/color.jpg" alt="ピンク背景">
+  </div>
+  <div class="text-box slide-right">
+    <h2>Personal Colorとは？</h2>
+    <p>
+      肌・瞳・髪の色に調和する色を見つける理論です。
+      自分に似合う色を知ることで、より魅力的に見せることができます。
+    </p>
+  </div>
+</section>
+
+<!-- ===== SEASON（4グリッド） ===== -->
+<div class="grid">
+
+  <a href="02-spring.html" class="card floating">
+    <img src="images/1.png" alt="Spring">
+    <p>Spring</p>
+  </a>
+
+  <a href="03-summer.html" class="card floating">
+    <img src="images/2.png" alt="Summer">
+    <p>Summer</p>
+  </a>
+
+  <a href="04-autumn.html" class="card floating">
+    <img src="images/3.png" alt="Autumn">
+    <p>Autumn</p>
+  </a>
+
+  <a href="05-winter.html" class="card floating">
+    <img src="images/4.png" alt="Winter">
+    <p>Winter</p>
+  </a>
+
+</div>
+
+
+<!-- ===== FORM ===== -->
+<section id="diagnose" class="section form-section">
+  <h2>簡易診断</h2>
+
+  <form id="diagnoseForm" class="form">
+    <p>肌タイプ</p>
+    <label><input type="radio" name="tone" value="warm"> 肌が黄色っぽい</label>
+    <label><input type="radio" name="tone" value="cool"> 肌が青白い</label>
+
+    <p>印象</p>
+    <label><input type="radio" name="bright" value="bright"> 明るい</label>
+    <label><input type="radio" name="bright" value="soft"> 落ち着き</label>
+
+    <button type="submit">診断する</button>
+  </form>
+
+  <p id="result"></p>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <p>© 2026 Personal Color</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

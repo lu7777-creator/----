@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.section {
+  padding: 100px 10%;
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  z-index: 1000;
+}
+
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg,#ffd4c4,#ffe8dc);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  text-align: center;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  width: 20px;
+  height: 40px;
+  border: 2px solid black;
+  border-radius: 20px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(0); }
+}
+
+/* 2カラム */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.two-column img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* グリッド */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+}
+
+.card {
+  text-align: center;
+  transition: 0.5s;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* FORM */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 300px;
+}
+
+button {
+  padding: 10px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* FOOTER */
+.footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+/* アニメーション */
+.fade {
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+  .grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
